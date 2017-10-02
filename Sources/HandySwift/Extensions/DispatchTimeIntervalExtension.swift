@@ -24,8 +24,8 @@ extension DispatchTimeInterval {
         case .nanoseconds(let nanoseconds):
             return Double(nanoseconds) / Timespan.nanosecondsPerSecond
 
-        default:
-            return Double.infinity
+        case .never:
+            return TimeInterval.infinity
         }
     }
 }
